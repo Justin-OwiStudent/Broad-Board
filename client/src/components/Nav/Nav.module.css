@@ -1,0 +1,67 @@
+.bar {
+    width: 100%;
+    background-color: #1e1e1e;
+    height: 100px;
+    position: relative;
+}
+
+.logo {
+    float: left;
+    height: 35px;
+    width: 220px;
+    margin-left: 25px;
+    margin-top: 10px;
+    padding: 20px;
+    background-image: url(../images/BoardLogo.png);
+    background-size: 100% 100%;
+}
+
+.log {
+    width: 125px;
+    height: 35px;
+    position: absolute;
+    right: 150px;
+    top: 25px;
+    border-radius: 25px; 
+    color: white;
+    border: 1px solid rgb(251, 251, 251);
+
+}
+
+.log:hover {
+    background-color: rgb(23, 18, 115);
+    color: white;
+}
+
+.admin {
+    width: 125px;
+    height: 35px;
+    color: white;
+    position: absolute;
+    right: 300px;
+    top: 25px;
+    border-radius: 25px;
+
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.admin:hover {
+    background-color: rgb(23, 18, 115);
+
+    color: white;
+}
+
+.pfp {
+    position: absolute;
+    right: 35px;
+    top: 10px;
+    height: 80px;
+    width: 80px;
+    background-color: green;
+    border-radius: 50px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
