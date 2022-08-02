@@ -12,7 +12,7 @@
 .MainManage{
     width: 90%;
     height: 800px;
-    background-color: red;
+    background-color: rgb(110, 110, 110);
     border: 2px solid black;
     margin: auto;
     border-radius: 25px;
@@ -20,10 +20,67 @@
 
 .item {
     margin: auto;
-    margin-top: 5px;
+    margin-top: 10px;
     width: 95%;
-    height: 100px;
+    height:50px;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.orderName {
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left ;
+    
+    
+}
+
+.orderDetails {
+    margin-top: 10px;
+    margin-left: 550px;
+    float: left ;
+
+}
+
+.orderStatus {
+    margin-top: 10px;
+    margin-left: 250px;
+    float: left ;
+}
+
+.actions {
+    width: 120px;
+    height: 100%;
+    position: absolute;
+    right: 5px;
+}
+
+.done {
    
+    float: left;
+    margin-left: 5px;
+    width: 45px;
+    height: 45px;
+    background-image: url(../images/correct.png);
+    background-size: 100% 100%;
     border-radius: 25px;
-    border: 1px solid black;
+}
+
+.done:hover {
+    background-color: green;
+}
+
+.delete {
+    margin-left: 10px;
+    
+    float: left;
+    width: 45px;
+    height: 45px;
+    background-image: url(../images/incorrect.png);
+    background-size: 100% 100%;
+    border-radius: 25px;
+}
+
+.delete:hover {
+    background-color: red;
 }
