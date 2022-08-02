@@ -5,7 +5,7 @@ import { Link} from "react-router-dom";
 
 const ItemCard = () => {
     return (
-        <Link to="/Individual">   <div className={classes.card}> 
+        <Link to="/Individual" >   <div className={classes.card}> 
             <div className={classes.item}></div>
             <div className={classes.Description}>
                 <h3>KFD Special</h3>

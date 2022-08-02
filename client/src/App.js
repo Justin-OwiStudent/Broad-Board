@@ -1,4 +1,5 @@
 import { Route, Routes, Outlet } from "react-router-dom";
+import Admin from "./components/Admin/Admin";
 import BoardShop from "./components/BoardShop/BoardShop";
 import GripShop from "./components/GripShop/GripShop";
 import Individual from "./components/IndividualItem/Individual";
@@ -19,6 +20,8 @@ function App() {
         <Route path="/WheelShop" element={<WheelShop/>}/>
         <Route path="/GripShop" element={<GripShop/>}/>
         <Route path="/Individual" element={<Individual/>}/>
+        <Route path="/Admin" element={<Admin/>}/>
+
 
 
 

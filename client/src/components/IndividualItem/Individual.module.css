@@ -2,6 +2,221 @@
     width:100%;
     height: 800px;
     margin: auto;
-    background-color: red;
+  
    
+}
+
+.container {
+    width: 95%;
+    height: 850px;
+    
+    margin: auto;
+}
+
+.back{
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/back.png);
+    background-size: 100% 100%;
+}
+
+.ImageContainer{
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+    float: left;
+    border: 1px solid black;
+    /* background-image: url(../images/Board2.png);
+    background-size: 100% 100%; */
+}
+
+.InsideImg {
+    margin: auto;
+    width: 40%;
+    height: 100%;
+    background-image: url(../images/Board2.png);
+    background-size: 100% 100%
+}
+
+.DetailContainer {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 600px;
+    height: 500px;
+    
+    float: left;
+}
+
+.DetailContainer h1 {
+    font-weight: 700;
+    color: black;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.rating {
+    width: 220px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+    
+}
+.star{
+    height: 100%;
+    width: 20px;
+    float: left;
+    background-image: url(../images/star.png);
+    background-size: 100% 100%;
+}
+
+.DetailContainer h2 {
+    font-weight: 750;
+    font-size: 25px;
+    color: black;
+    margin-top: 100px;
+}
+
+.DetailContainer h4 {
+    margin-left: 25px;
+    font-size: 18px;
+    margin-top: 25px;
+    font-weight: 600;
+    color: black;
+}
+
+.quantity {
+    margin-top: 50px;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    float: left;
+    border: 1px solid black;
+    margin-left: 5px;
+}
+
+.one {
+    width: calc(30%);
+    height: 100%;
+    border-right: 1px solid black;
+    float: left;
+    text-align: center;
+}
+
+.two {
+    width: calc(37%);
+    height: 100%;
+    float: left;
+    text-align: center;
+   
+}
+
+.three {
+    width: calc(30%);
+    height: 100%;
+    border-left: 1px solid black;
+    float: left;
+    text-align: center;
+    
+}
+
+.add {
+    margin-top: 50px;
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+    float: left;
+    margin-left: 5px;
+    background-color: #218FBE;
+    color: white;
+    border: none;
+
+}
+
+.add:hover {
+    background-color: #005477;
+
+}
+
+.bestseller {
+    width: 400px;
+    height: 600px;
+    float: left;
+  
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.besties {
+    width: 100%;
+    height: 200px;
+    border: 0.1rem solid black;
+    position: relative;
+}
+
+.bestImg {
+    width: 35%;
+    height: 100%;
+    float: left;
+     
+}
+
+.hh2 {
+    color: black;
+
+}
+
+.bestImgImg {
+    height: 100%;
+    width: 50%;
+   
+    margin: auto;
+    background-image: url(../images/Board1.png);
+    background-size: 100% 100%;
+}
+
+.bestPrice {
+    position: absolute;
+    bottom: 20px;
+    right: 160px;
+    color: black;
+
+}
+
+.besties2 {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(127, 161, 127);
+}
+
+.besties3 {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(0, 0, 0);
+}
+
+.moreDeets{
+    width: 800px;
+    height: 400px;
+   
+    margin-top: 600px;
+    margin-left: 50px;
+}
+
+h7 {
+    font-size: 25px;
+    font-weight: 400;
+    float: left;
+    margin-top: -45px;
+    margin-left: 10px;
+    text-decoration: underline 5px #218FBE;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+li {
+    margin-top: 10px;
 }
