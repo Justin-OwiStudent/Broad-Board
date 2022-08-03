@@ -1,19 +1,10 @@
-import React from "react";
-import Nav from "../Nav/Nav";
+import React from 'react';
 import classes from "./Admin.module.css";
-import Stock from "./Stock";
-
-const Admin = () => {
-  return (
-    <>
-      <Nav />
-
-      <h1 className={classes.Orders}>Stock</h1>
-      <h1 className={classes.Orders}>Orders</h1>
 
 
-        <Stock/>
-      {/* <div className={classes.manage}>
+const Stock = () => {
+    return (
+        <div className={classes.manage}>
         <div className={classes.MainManage}>
           <div className={classes.item}>
             <h1 className={classes.orderName}>Justin Koster</h1>
@@ -37,9 +28,8 @@ const Admin = () => {
             </div>
           </div>
         </div>
-      </div> */}
-    </>
-  );
+      </div>
+    );
 };
 
-export default Admin;
+export default Stock;

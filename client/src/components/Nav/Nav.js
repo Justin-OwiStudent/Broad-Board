@@ -21,7 +21,11 @@ const Nav = () => {
         </div>
       </Link>
 
-        <div className={classes.cart}></div>
+
+<Link to="/Cart">
+  <div className={classes.cart}></div>
+</Link>
+        
 
       <div className={classes.pfp}></div>
     </div>

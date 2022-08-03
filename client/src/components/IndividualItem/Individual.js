@@ -50,7 +50,8 @@ const Individual = (props) => {
                             <div className={classes.three}>+</div>
 
                         </div>
-                        <button className={classes.add}>add to cart</button>
+                        <Link to="/Cart"> <button className={classes.add}>add to cart</button></Link>
+                        
                 </div>
 
                 <div className={classes.bestseller}>

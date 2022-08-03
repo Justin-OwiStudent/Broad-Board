@@ -37,7 +37,8 @@
 
 .orderDetails {
     margin-top: 10px;
-    margin-left: 550px;
+    margin-left: 400px;
+    text-align: start;
     float: left ;
 
 }
