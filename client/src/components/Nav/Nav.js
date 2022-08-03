@@ -6,28 +6,47 @@ const Nav = () => {
   return (
     <div className={classes.bar}>
 
-        <Link to="/BoardShop"> <div className={classes.logo}></div> </Link>
-      
+
+      <Link to="/BoardShop">
+        {" "}
+        <div className={classes.logo}></div>{" "}
+      </Link>
+
+
 
       <Link to="/">
-      <div className={classes.log}>
-        <h3>Log in</h3>
-      </div>
+        <div className={classes.log}>
+          <h3 className={classes.NavText}>Log Out</h3>
+        </div>
       </Link>
 
       <Link to="/Admin">
         <div className={classes.admin}>
-          <h3>Admin</h3>
+          <h3 className={classes.NavText}>Admin</h3>
         </div>
       </Link>
 
+      {/* <Link to="/Cart">
+        <div className={classes.cart}></div>
+      </Link> */}
 
-<Link to="/Cart">
-  <div className={classes.cart}></div>
-</Link>
+
+      {/* <div className={classes.block}>
         
+        </div>
+        
+      <div className={classes.block}>
+        
+      </div> */}
 
-      <div className={classes.pfp}></div>
+      <div className={classes.block}>
+      <Link to="/Cart">
+        <div className={classes.cart}></div>
+      </Link>
+      </div>
+
+
+      {/* <div className={classes.pfp}></div> */}
     </div>
   );
 };

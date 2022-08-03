@@ -1,5 +1,7 @@
 import { Route, Routes, Outlet } from "react-router-dom";
 import Admin from "./components/Admin/Admin";
+import Orders from "./components/Admin/Orders";
+import Stock from "./components/Admin/Stock";
 import BoardShop from "./components/BoardShop/BoardShop";
 import Cart from "./components/Cart/Cart";
 import GripShop from "./components/GripShop/GripShop";
@@ -24,6 +26,11 @@ function App() {
         <Route path="/Individual" element={<Individual/>}/>
         <Route path="/Admin" element={<Admin/>}/>
         <Route path="/Cart" element={<Cart/>}/>
+
+        <Route path="/Stock" element={<Stock/>}/>
+        <Route path="/Orders" element={<Orders/>}/>
+
+        
 
 
         {/* <Route path="/Login" element={<Login/>}/> */}

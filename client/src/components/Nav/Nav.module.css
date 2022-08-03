@@ -24,14 +24,17 @@
     top: 35px;
     border-radius: 25px; 
     color: white;
-    border: 1px solid rgb(251, 251, 251);
+    /* border: 1px solid rgb(251, 251, 251); */
 
 }
 
-.log:hover {
-    background-color: #218FBE;
-    color: white;
-}
+
+/* background-color: #218FBE; */
+
+/* .log:hover {
+    background-color: rgba(40, 63, 132, 0.75);
+    color: #218FBE; 
+} */
 
 .admin {
     width: 125px;
@@ -40,25 +43,27 @@
     position: absolute;
     right: 300px;
     top: 35px;
-    border-radius: 25px;
+    
 
-    border: 1px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
 }
 
-.admin:hover {
-    background-color: #218FBE;
 
+/* background-color: #218FBE;
+     */
+/* .admin:hover {
+     background-color: rgba(40, 63, 132, 0.75);
     color: white;
-}
+} */
 
 .cart {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
    
   
     position: absolute;
-    right: 600px;
-    top: 25px;
+    right: 40px;
+    top: 30px;
     background-image: url(../images/shopping-cart.png);
     background-size: 100% 100%;
 }
@@ -76,7 +81,34 @@
     background-size: 100% 100%;
 }
 
-h3 {
+.NavText {
+    color: white;
+}
+
+.NavText:hover {
+    color: #218FBE;
+}
+
+/* h3 {
     font-weight: 400;
     font-size: 20px;
+    color: white;
+}
+
+h3:hover {
+    color: white;
+} */
+
+.block {
+   float: right;
+   margin-right: 5px;
+    width: 100px;
+    height: 100%;
+    border-left: 1px solid white;
+}
+
+.block:hover {
+    box-shadow: 0px 1px 17px 0px #218FBE;
+-webkit-box-shadow: 0px 1px 17px 0px #218FBE;
+-moz-box-shadow: 0px 1px 17px 0px #218FBE;
 }

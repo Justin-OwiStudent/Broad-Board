@@ -14,12 +14,13 @@
 }
 
 .catagories {  
-    width: 60px;
+   
     margin: auto;
     margin-left: 125px;
     float: left;
     text-decoration: none;
     color: white;
+    
 }
 
 .catagories:hover {

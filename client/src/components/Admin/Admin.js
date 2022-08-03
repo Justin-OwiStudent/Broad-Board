@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import classes from "./Admin.module.css";
 import Stock from "./Stock";
@@ -8,11 +9,15 @@ const Admin = () => {
     <>
       <Nav />
 
-      <h1 className={classes.Orders}>Stock</h1>
-      <h1 className={classes.Orders}>Orders</h1>
+
+    <Link to="/Stock"> <h1 className={classes.Stock}>Stock</h1> </Link>
+    <Link to="/Orders"> <h1 className={classes.Orders}>Orders</h1> </Link>
+
+      
+      
 
 
-        <Stock/>
+        {/* <Stock/> */}
       {/* <div className={classes.manage}>
         <div className={classes.MainManage}>
           <div className={classes.item}>
