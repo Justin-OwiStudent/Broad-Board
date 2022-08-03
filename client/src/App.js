@@ -4,6 +4,7 @@ import BoardShop from "./components/BoardShop/BoardShop";
 import GripShop from "./components/GripShop/GripShop";
 import Individual from "./components/IndividualItem/Individual";
 import Landing from "./components/LandingPage/Landing";
+import Login from "./components/Login/Login";
 import TruckShop from "./components/TruckShop/TruckShop";
 import WheelShop from "./components/WheelShop/WheelShop";
 
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Landing/>}/>
+        <Route path="/" element={<Login/>}/>
 
         <Route path="/BoardShop" element={<BoardShop/>}/>
 
@@ -21,6 +22,11 @@ function App() {
         <Route path="/GripShop" element={<GripShop/>}/>
         <Route path="/Individual" element={<Individual/>}/>
         <Route path="/Admin" element={<Admin/>}/>
+
+        {/* <Route path="/Login" element={<Login/>}/> */}
+        
+
+
 
 
 

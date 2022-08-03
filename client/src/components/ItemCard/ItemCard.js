@@ -12,7 +12,9 @@ const ItemCard = () => {
               
 
                 <h5>R 200</h5>
-                <div className={classes.addButton}> Add to cart</div>
+
+                <button className={classes.addButton}> Add to cart</button>
+                {/* <div className={classes.addButton}> Add to cart</div> */}
 
             </div>
 

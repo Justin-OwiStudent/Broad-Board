@@ -1,27 +1,31 @@
-import React from 'react';
-import classes from './Nav.module.css'
+import React from "react";
+import classes from "./Nav.module.css";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
-    return (
-        
-        <div className={classes.bar}>
-            <div className={classes.logo}>
+  return (
+    <div className={classes.bar}>
 
-            </div>
-            <div className={classes.log}>
-                <h3>Log in</h3>
-            </div>
-            <div className={classes.admin}>
-                <h3>Admin</h3>
+        <Link to="/BoardShop"> <div className={classes.logo}></div> </Link>
+      
 
-            </div>
-            <div className={classes.pfp}>
-                
-            </div>
+      <Link to="/">
+      <div className={classes.log}>
+        <h3>Log in</h3>
+      </div>
+      </Link>
+
+      <Link to="/Admin">
+        <div className={classes.admin}>
+          <h3>Admin</h3>
         </div>
+      </Link>
 
-       
-    );
+        <div className={classes.cart}></div>
+
+      <div className={classes.pfp}></div>
+    </div>
+  );
 };
 
 export default Nav;

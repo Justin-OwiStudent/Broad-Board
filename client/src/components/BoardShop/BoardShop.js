@@ -47,6 +47,7 @@ const BoardShop = () => {
             />
             
          </div>
+         
         <ItemNav/>
         
         <div className={classes.MainShop}>

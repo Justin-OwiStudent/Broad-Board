@@ -60,3 +60,17 @@ h5 {
     
     
 }
+
+.addButton {
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    margin-top: 15px;
+    background-color: #218FBE;
+    border: 0.1px solid black;
+}
+
+.addButton:hover {
+    background-color: #06a5e9;
+}

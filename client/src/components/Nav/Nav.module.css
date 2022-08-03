@@ -21,7 +21,7 @@
     height: 35px;
     position: absolute;
     right: 150px;
-    top: 25px;
+    top: 35px;
     border-radius: 25px; 
     color: white;
     border: 1px solid rgb(251, 251, 251);
@@ -29,7 +29,7 @@
 }
 
 .log:hover {
-    background-color: rgb(23, 18, 115);
+    background-color: #218FBE;
     color: white;
 }
 
@@ -39,16 +39,28 @@
     color: white;
     position: absolute;
     right: 300px;
-    top: 25px;
+    top: 35px;
     border-radius: 25px;
 
     border: 1px solid rgb(255, 255, 255);
 }
 
 .admin:hover {
-    background-color: rgb(23, 18, 115);
+    background-color: #218FBE;
 
     color: white;
+}
+
+.cart {
+    width: 50px;
+    height: 50px;
+   
+  
+    position: absolute;
+    right: 600px;
+    top: 25px;
+    background-image: url(../images/shopping-cart.png);
+    background-size: 100% 100%;
 }
 
 .pfp {
@@ -57,8 +69,11 @@
     top: 10px;
     height: 80px;
     width: 80px;
-    background-color: green;
+   
+    border: 1px solid black;
     border-radius: 50px;
+    background-image: url(../images/rick.png);
+    background-size: 100% 100%;
 }
 
 h3 {

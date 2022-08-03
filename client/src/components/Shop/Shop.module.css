@@ -8,14 +8,13 @@
 .NewArrivals {
     padding-left: 60px;
     width: 90%;
-    height: 450px;
-
+    height: 500px;
     margin: auto;
     position: relative;
 }
 
 .Popular {
-    padding-top: 50px;
+    padding-top: 10px;
     padding-left: 60px;
     width: 90%;
     height: 450px;
