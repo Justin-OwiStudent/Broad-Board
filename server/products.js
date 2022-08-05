@@ -3,7 +3,6 @@ const products = {
     {
         id: 1,
         productName: 'Enjoi - Deedz Classic Panda Super Sap', 
-        category: "Decks",
         Price: 1.299,
         inStock: 13, 
         availStock: [
@@ -39,7 +38,6 @@ const products = {
     {
         id: 2,
         productName: 'Enjoi - Thaynan Classic Panda Super Sap', 
-        category: "Decks",
         Price: 1.299,
         inStock: 14, 
         availStock: [
@@ -75,7 +73,6 @@ const products = {
     {
         id: 3,
         productName: 'Enjoi - Bird Watcher', 
-        category: "Decks",
         Price: 999.00,
         inStock: 15, 
         availStock: [
@@ -111,7 +108,6 @@ const products = {
     {
         id: 4,
         productName: 'Enjoi - Wailin Thirdeye', 
-        category: "Decks",
         Price: 1.099,
         inStock: 8, 
         availStock: [
@@ -147,7 +143,6 @@ const products = {
     {
         id: 5,
         productName: 'Enjoi - Mullen Round', 
-        category: "Decks",
         Price: 1.199,
         inStock: 12, 
         availStock: [
@@ -183,7 +178,6 @@ const products = {
     {
         id: 6,
         productName: 'Santa Cruz - Lucky Cat', 
-        category: "Decks",
         Price: 999.00,
         inStock: 9, 
         availStock: [
@@ -219,7 +213,6 @@ const products = {
     {
         id: 7,
         productName: 'Almost - Most HYB', 
-        category: "Decks",
         Price: 999.00,
         inStock: 9, 
         availStock: [
@@ -254,9 +247,8 @@ const products = {
     },
     {
         id: 8,
-        productName: 'Tensor - Alum Stencil Mirror', 
-        category: "Trucks",
-        Price: 1.199,
+        productName: 'KFD - Chill flagship', 
+        Price: 949,
         inStock: 6, 
         availStock: [
             {
@@ -286,9 +278,8 @@ const products = {
     },
     {
         id: 9,
-        productName: 'Indapendant - 149 Hollow Mid Lower Hanger', 
-        category: "Trucks",
-        Price: 1.249,
+        productName: 'Almost - Yuri silver lining', 
+        Price: 1.199,
         inStock: 6, 
         availStock: [
             {
@@ -304,9 +295,8 @@ const products = {
     },
     {
         id: 10,
-        productName: 'Ricta - Sparx', 
-        category: "Wheels",
-        Price: 399.00,
+        productName: 'Almost - New Pro Silver Lining', 
+        Price: 1.199,
         type: "hard",
         inStock: 2, 
         availStock: [
@@ -321,68 +311,6 @@ const products = {
             }
         ]       
     },
-    {
-        id: 10,
-        productName: 'Blind - Reaper', 
-        category: "Wheels",
-        Price: 499.00,
-        type: "hard",
-        inStock: 4, 
-        availStock: [
-            {
-                size: 52, 
-                qty: 4, 
-                variations: [
-                    {
-                        white: 4,
-                    }
-                ]
-            }
-        ]       
-    },
-    {
-        id: 11,
-        productName: 'sector 9 - 9 ball', 
-        category: "Wheels",
-        Price: 1.099,
-        type: "Soft",
-        inStock: 14, 
-        availStock: [
-            {
-                size: 74, 
-                qty: 14, 
-                variations: [
-                    {
-                        blue: 4,
-                        green: 2,
-                        red: 8,
-
-                    }
-                ]
-            }
-        ]       
-    },
-    {
-        id: 12,
-        productName: 'Bully Boy - cereal grip tape', 
-        category: "Grip",
-        Price: 249.00,
-        inStock: 14, 
-        availStock: [
-            {
-                size: NA, 
-                qty: 5, 
-                variations: [
-                    {
-                       Bully
-
-                    }
-                ]
-            }
-        ]       
-    },
-
-
 ], 
 };
 
