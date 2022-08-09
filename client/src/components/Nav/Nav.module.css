@@ -86,7 +86,9 @@
 }
 
 .NavText:hover {
-    color: #218FBE;
+    /* color: #218FBE; */
+
+    color: #929292;
 }
 
 /* h3 {

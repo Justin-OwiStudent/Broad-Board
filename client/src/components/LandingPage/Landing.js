@@ -19,7 +19,7 @@ const Landing = () => {
       
 
     return (
-        <div>
+        <div className={classes.all}>
             <Nav/>
             <div className={classes.Slider}> 
 
@@ -33,7 +33,8 @@ const Landing = () => {
                 />
                 
              </div>
-            <ItemNav/>
+            {/* <ItemNav/> */}
+            <Shop/>
             
             {/* <Shop/> */}
 {/* 

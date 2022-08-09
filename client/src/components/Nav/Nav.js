@@ -7,7 +7,7 @@ const Nav = () => {
     <div className={classes.bar}>
 
 
-      <Link to="/BoardShop">
+      <Link to="/Landing">
         {" "}
         <div className={classes.logo}></div>{" "}
       </Link>

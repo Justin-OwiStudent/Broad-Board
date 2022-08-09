@@ -12,8 +12,10 @@ const Shop = () => {
                 <ItemCard/>
                 <ItemCard/>
                 <ItemCard/>
-                <ItemCard/>
-                <ItemCard/>
+               
+
+               
+               
 
                 
             </div>
@@ -23,9 +25,8 @@ const Shop = () => {
                 <ItemCard/>
                 <ItemCard/>
                 <ItemCard/>
-                <ItemCard/>
-                <ItemCard/>
-                <ItemCard/>
+                
+               
 
            
             </div>
