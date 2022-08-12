@@ -4,6 +4,7 @@ const products = {
         id: 1,
         productName: 'Enjoi - Deedz Classic Panda Super Sap', 
         Price: 1.299,
+        DiscountedPrice: 1000,
         inStock: 13, 
         availStock: [
             {
@@ -39,6 +40,7 @@ const products = {
         id: 2,
         productName: 'Enjoi - Thaynan Classic Panda Super Sap', 
         Price: 1.299,
+        DiscountedPrice: 1000,
         inStock: 14, 
         availStock: [
             {
@@ -74,6 +76,7 @@ const products = {
         id: 3,
         productName: 'Enjoi - Bird Watcher', 
         Price: 999.00,
+        DiscountedPrice: 1000,
         inStock: 15, 
         availStock: [
             {
@@ -109,6 +112,7 @@ const products = {
         id: 4,
         productName: 'Enjoi - Wailin Thirdeye', 
         Price: 1.099,
+        DiscountedPrice: 1000,
         inStock: 8, 
         availStock: [
             {
@@ -144,6 +148,7 @@ const products = {
         id: 5,
         productName: 'Enjoi - Mullen Round', 
         Price: 1.199,
+        DiscountedPrice: 1000,
         inStock: 12, 
         availStock: [
             {
@@ -179,6 +184,7 @@ const products = {
         id: 6,
         productName: 'Santa Cruz - Lucky Cat', 
         Price: 999.00,
+        DiscountedPrice: 1000,
         inStock: 9, 
         availStock: [
             {
@@ -214,6 +220,7 @@ const products = {
         id: 7,
         productName: 'Almost - Most HYB', 
         Price: 999.00,
+        DiscountedPrice: 1000,
         inStock: 9, 
         availStock: [
             {
@@ -249,6 +256,7 @@ const products = {
         id: 8,
         productName: 'KFD - Chill flagship', 
         Price: 949,
+        DiscountedPrice: 800,
         inStock: 6, 
         availStock: [
             {
@@ -280,14 +288,33 @@ const products = {
         id: 9,
         productName: 'Almost - Yuri silver lining', 
         Price: 1.199,
+        DiscountedPrice: 1000,
         inStock: 6, 
         availStock: [
             {
-                size: 5.5, 
+                size: 7, 
                 qty: 2, 
                 variations: [
                     {
-                        raw: 2,
+                        blue: 2,
+                    }
+                ]
+            }, 
+            {
+                size: 8.25, 
+                qty: 4, 
+                variations: [
+                    {
+                        blue: 4, 
+                    }
+                ]
+            },
+            {
+                size: 9, 
+                qty: 3, 
+                variations: [
+                    {
+                        blue: 3, 
                     }
                 ]
             }
@@ -297,15 +324,33 @@ const products = {
         id: 10,
         productName: 'Almost - New Pro Silver Lining', 
         Price: 1.199,
-        type: "hard",
+        DiscountedPrice: 1000,
         inStock: 2, 
         availStock: [
             {
-                size: 54, 
+                size: 7, 
                 qty: 2, 
                 variations: [
                     {
-                        white: 2,
+                        blue: 2,
+                    }
+                ]
+            }, 
+            {
+                size: 8.25, 
+                qty: 4, 
+                variations: [
+                    {
+                        blue: 4, 
+                    }
+                ]
+            },
+            {
+                size: 9, 
+                qty: 3, 
+                variations: [
+                    {
+                        blue: 3, 
                     }
                 ]
             }

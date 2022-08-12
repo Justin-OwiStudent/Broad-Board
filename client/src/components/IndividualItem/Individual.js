@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-
 import Nav from '../Nav/Nav';
 import classes from './Individual.module.css';
 
+
 const Individual = (props) => {
+
+    
+    
 
     // const backhandler = () => {
     //     props.
@@ -142,7 +145,7 @@ const Individual = (props) => {
 
 
 
-                    <button className={classes.add}> Add to Cart </button>
+                    <button className={classes.add}  > Add to Cart </button>
                 </div>
 
                 <div className={classes.bestSeller}>
@@ -167,6 +170,12 @@ const Individual = (props) => {
                     </div>
 
                     <div className={classes.best4}>
+                    <div className={classes.bestImage}></div>
+                        <h1 className={classes.bestName}>KFD</h1>
+                        <h3>R900</h3>
+                    </div>
+
+                    <div className={classes.best5}>
                     <div className={classes.bestImage}></div>
                         <h1 className={classes.bestName}>KFD</h1>
                         <h3>R900</h3>

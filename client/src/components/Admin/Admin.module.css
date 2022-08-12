@@ -215,7 +215,7 @@
 .OrderPage{
     width: 100%;
     height: 900px;
-    background-color: red;
+    
     margin-top: 40px;
 }
 
@@ -223,7 +223,12 @@
     width: 20%;
     height: 100%;
     background-color: black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
     padding-top: 50px;
+    float: left;
+
 }
 
 .OrderText {
@@ -250,4 +255,72 @@
     font-size: 40px;
     color: white;
     text-align: center;
+}
+
+.rightSection {
+    width: 79%;
+    height: 100%;
+    
+    padding-top: 50px;
+    float: right;
+}
+
+.Number {
+    float: left;
+    width: 10%;
+
+}
+.Client {
+    float: left;
+    width: 20%;
+    
+}
+.Product {
+    float: left;
+    width: 40%;
+    
+}
+.Date {
+    float: left;
+    width: 20%;
+    
+}
+
+.orders {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border-bottom: .05px solid black;
+}
+
+.orderNumber {
+    float: left;
+    text-align: left;
+    width: 10%;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.orderClient {
+    text-align: left;
+    width: 20%;
+    float: left;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.orderProduct {
+    text-align: left;
+    width: 40%;
+    float: left;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.orderDate {
+    text-align: left;
+    width: 20%;
+    float: left;
+    font-size: 20px;
+    margin-top: 5px;
 }

@@ -15,7 +15,7 @@ const Login = () => {
 
                     <input placeholder='Username' className={classes.username}/>
                     <input placeholder='Password' className={classes.password}/>
-        <Link to='./BoardShop'> <button className={classes.but}> Log in</button> </Link>
+        <Link to='./Landing'> <button className={classes.but}> Log in</button> </Link>
                     
 
                 </div>
