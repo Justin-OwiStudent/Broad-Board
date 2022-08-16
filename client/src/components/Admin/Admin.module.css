@@ -9,11 +9,12 @@
     margin-left: 150px;
     font-size: 50px;
     color: black;
+    text-decoration: underline;
 
 }
 
 .Stock:hover {
-    color: #218FBE;
+    text-decoration-color: #218FBE;
 }
 
 .Orders{
@@ -21,11 +22,12 @@
     font-size: 50px;
     width: 50px;
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .Orders:hover {
-    color: #218FBE;
+   
+    text-decoration-color: #218FBE;
 }
 
 /* 

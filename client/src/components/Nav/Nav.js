@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./Nav.module.css";
 import { Link } from "react-router-dom";
+import { BsCart2 } from "react-icons/bs";
+
 
 const Nav = () => {
   return (
@@ -41,7 +43,7 @@ const Nav = () => {
 
       <div className={classes.block}>
       <Link to="/Cart">
-        <div className={classes.cart}></div>
+         <BsCart2 className={classes.cart}/> 
       </Link>
       </div>
 
