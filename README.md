@@ -17,7 +17,7 @@
 <p align="center">
 
   <a href="https://github.com/Justin-OwiStudent/Broad-Board/issues">
-    <img src="https://github.com/Justin-OwiStudent/Broad-Board/blob/main/client/src/components/images/BoardLogo.png" alt="Logo" width="140" height="140">
+    <img src="https://github.com/Justin-OwiStudent/Broad-Board/blob/main/client/src/components/images/BoardLogo.png" alt="Logo" width="250" height="140">
   </a>
   
   <h3 align="center">Medi Plus</h3>
