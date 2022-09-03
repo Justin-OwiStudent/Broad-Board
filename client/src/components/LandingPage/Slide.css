@@ -27,6 +27,13 @@
     user-select: none;
 }
 
+.rightArrow:hover {
+    color: #218FBE;
+
+}
+
+
+
 .leftArrow {
     position: absolute;
     top: 50%;
@@ -36,6 +43,11 @@
     z-index: 9;
     cursor: pointer;
     user-select: none;
+}
+
+.leftArrow:hover {
+color: #218FBE;
+    
 }
 
 .slide { 

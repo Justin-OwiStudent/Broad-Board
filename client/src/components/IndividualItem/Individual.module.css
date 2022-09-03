@@ -331,7 +331,9 @@ li {
 }
 
 .block:hover {
-    background-color: #929292;
+    background-color: #218FBE;
+    transition: ease-in-out 200ms;
+
 }
 
 .add {
@@ -343,12 +345,13 @@ li {
     font-size: 30px;
     background-color: black;
     color: white;
-
+    border: none;
 }
 
 
 .add:hover{
-    background-color: #929292;
+    background-color: #218FBE;
+
     transition: ease-in-out 300ms;
 }
 

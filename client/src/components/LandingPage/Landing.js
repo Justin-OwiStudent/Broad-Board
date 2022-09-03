@@ -12,6 +12,9 @@ import classes from "./Landing.module.css";
 import { SliderData } from "./SliderData";
 import Axios from "axios";
 import ItemCard from "../ItemCard/ItemCard";
+import Cartmodal from "../Cart/Cartmodal";
+import { BsCart2 } from "react-icons/bs";
+
 
 const Landing = () => {
 
@@ -22,7 +25,6 @@ const Landing = () => {
   useEffect(() => {
     Axios.get("http://localhost:5000/api/allproducts").then((res) => {
       let data = res.data;
-      console.log(data)
       const productItem = data.map((item) => (
         <ItemCard
           key={item._id}
@@ -33,25 +35,44 @@ const Landing = () => {
           Desc={item.Description}
           DiscPrice={item.DiscountedPrice}
           stock={item.stock}
-          sizeOne={item.sizeOne}
-          sizeTwo={item.sizeTwo}
-          sizeThree={item.sizeThree}
+          Sizes={item.Sizes}
+          SizeOne={item.Sizes.sevenHalf}
+          SizeTwo={item.Sizes.eight}
+          SizeThree={item.Sizes.eightHalf}
           editRender={setRenderProducts}
         />
       ));
+      console.log(productItem)
       setReadProducts(productItem);
       setRenderProducts(false);
     });
   }, [renderProducts]);
 
  
+  const [modalArea, setModal] = useState();
 
 
+  const cart = () => {
+    setModal(<Cartmodal 
+      close={setModal}
+    />)
+  }
+
+
+
+
+
+  
 
   return (
     <div className={classes.all}>
       <Nav />
 
+      <BsCart2  className={classes.carting} onClick={cart}/> 
+
+    {/* <div className={classes.carting} onClick={cart}></div> */}
+    
+    {modalArea}
       <div className={classes.Slider}>
         <ImageSlider slides={SliderData} />
       </div>

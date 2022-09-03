@@ -24,6 +24,8 @@
 .card:hover {
     -webkit-transform: scale(1.5);
     transform: scale(1.1);
+
+  
 }
 
 .item {
@@ -81,7 +83,8 @@ h5 {
 .addButton:hover {
     /* background-color: #06a5e9; */
     
-    background-color: #929292;
+    background-color: #218FBE;
+    ;
     transition: ease-in-out 200ms;
     
 }

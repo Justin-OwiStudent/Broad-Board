@@ -5,7 +5,9 @@ import Nav from '../Nav/Nav';
 import classes from './Individual.module.css';
 
 
-const Individual = (props) => {
+
+const Individual = () => {
+    
 
   let navigate = useNavigate();
     
@@ -15,7 +17,10 @@ const Individual = (props) => {
   }
 
   let productId = sessionStorage.getItem("productId");
+  
+    // console.log(productId)
     
+
 //   key={item._id}
 //   productId={item._id}
 //   productName={item.productName}
@@ -37,11 +42,13 @@ const Individual = (props) => {
     SizeThree: ""
   });
 
+  console.log(productData)
+
   useEffect(()=>{
     Axios.get('http://localhost:5000/api/oneproduct/' + productId)
     .then(res => {
       let data = res.data;
-    //   console.log(data.Sizes.sevenHalf)
+    //   console.log(data)
       setProductData({
         ProductName: data.ProductName,
         Description: data.Description,

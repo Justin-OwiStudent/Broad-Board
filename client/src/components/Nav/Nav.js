@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Nav.module.css";
 import { Link } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
+import Cartmodal from "../Cart/Cartmodal";
 
 
 const Nav = () => {
+
+
+
   return (
+    <>
     <div className={classes.bar}>
 
 
@@ -41,15 +46,18 @@ const Nav = () => {
         
       </div> */}
 
-      <div className={classes.block}>
-      <Link to="/Cart">
-         <BsCart2 className={classes.cart}/> 
-      </Link>
-      </div>
+      {/* <div className={classes.block}> */}
+      {/* <Link to="/Cart"> */}
+         {/* <BsCart2  className={classes.cart}/>  */}
+      {/* </Link> */}
+      {/* </div> */}
 
 
       {/* <div className={classes.pfp}></div> */}
     </div>
+
+    
+    </>
   );
 };
 

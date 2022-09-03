@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import classes from "./Admin.module.css";
+import Stock from "./Stock";
 
 
 const Admin = () => {
   return (
     <>
-      <Nav />
+      
         
-
+    <Stock/>
     <Link to="/Stock"> <h1 className={classes.Stock}>Stock</h1> </Link>
     <Link to="/Orders"> <h1 className={classes.Orders}>Orders</h1> </Link>
 

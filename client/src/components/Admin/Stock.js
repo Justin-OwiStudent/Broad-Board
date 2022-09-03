@@ -7,8 +7,9 @@ import EditStock from './EditStock';
 import StockItem from './StockItem';
 
 
-const Stock = () => {
+const Stock = (props) => {
 
+  console.log(props)
   const [readProducts, setReadProducts] = useState();
   const [renderProducts, setRenderProducts] = useState(false);
 
@@ -26,12 +27,14 @@ const Stock = () => {
           Desc={item.Description}
           DiscPrice={item.DiscountedPrice}
           stock={item.stock}
-          SizeOne={item.SizeOne}
-          SizeTwo={item.SizeTwo}
-          SizeThree={item.SizeThree}
+          Sizes={item.Sizes}
+          SizeOne={item.Sizes.sevenHalf}
+          SizeTwo={item.Sizes.eight}
+          SizeThree={item.Sizes.eightHalf}
           editRender={setRenderProducts}
         />
       ));
+      console.log(stockItem)
       setReadProducts(stockItem);
       setRenderProducts(false);
     });
