@@ -23,7 +23,7 @@
   <h3 align="center">Medi Plus</h3>
 
   <p align="center">
-    A react project using PHP to make a receptionist application  <br>
+    A Ecommerce website based on selling skateboards, using MongoDB as a backend service to controll all the data  <br>
    
     
    <br />
@@ -68,12 +68,12 @@
 
 ### Project Description
 
-This SPA project was created in React.js alongside with data from PHP database, this is a medical receptionist application where you can control the amount of patients, doctors and appointments you have.
+This SPA project was created in React.js alongside MongoDB, React was used as the frontend framework, MongoDB was used to control the backend and all the data for the site. There is an admin section where the owner can control the stock as well as an order page where the owner can see what ongoing orders there are. 
 
 ### Built With
 
 * [React](https://reactjs.org/)
-* [PHP](https://www.php.net/)
+* [MongoDB](https://www.mongodb.com/)
 
 
 
@@ -98,14 +98,14 @@ Enter `https://github.com/Justin-OwiStudent/Broad-Board` into the URL field and 
 2. Clone Repository </br>
 Run the following in the command-line to clone the project:
    ```sh
-   git clone https://github.com/Justin-OwiStudent/Receptionist-App
+   git clone https://github.com/Justin-OwiStudent/Broad-Board
    ```
     Open `Software` and select `File | Open...` from the menu. Select cloned directory and press `Open` button
 
 3. Install Dependencies </br>
 Run the following in the command-line to install all the required dependencies:
    ```sh
-   npm install
+   npm i install
    ```
 
 
@@ -113,23 +113,23 @@ Run the following in the command-line to install all the required dependencies:
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
 ## Features and Functionality
 
-You are able to add a Patient, Doctor and Appointment to the database using PHP, you are also able to delete and update these items accordingly, you are able to register a user to the database and there is a login validation and inscription implemented
+On this site you are able to view all the available stock, you are able to view the product on an individual page. you can order items and checkout to create an order. The admin section of this site allows the admin to add products, delete products, as well as update the stock, name, description and prices of an individual product.
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 
 
-### All the Medical data you need !
-Here you have access to your medical application, on the dashboard you are able to see all the appointments that are made, you can remove and also update the appointment information.
+### All the Boards you can think of !
+There is a wide selection of Boards available to choose from as well as a variety of sizes for each board.
 
 
 ![image2](https://github.com/Justin-OwiStudent/Receptionist-App/blob/main/Mokcups/Mockup1.png)
 ### Feature 2
 
-You are able to see all the patients listed on the database and you can edit or delete an individual patient, you can furthermore add a new patient to the database aswel.
+Here you are able to view all the available products on the store, these are all dynamically generated based on the data from the database.
 
 ![image3](https://github.com/Justin-OwiStudent/Receptionist-App/blob/main/Mokcups/Mockup3.png)
 ### Feature 3
 
-You can see all the doctors registered to your practicion over here, each having their own card, the doctors can be edited, deleted and also you can add a new doctor to the database.
+Here you can see all the products on the admin side, you can add more products as well as update them or delete them, when updating any item it will change the information on all pages.
 
 ![image4](https://github.com/Justin-OwiStudent/Receptionist-App/blob/main/Mokcups/Mockup4.png)
 
@@ -142,7 +142,7 @@ You can see all the doctors registered to your practicion over here, each having
 
 The `Conceptual Process` is the set of actions, activities and research that was done when starting this project.
 
-initially i had a poor Ui design for this project and soon restarted the project, i did a very simple UI design with the functionality easily incorporated.
+Initially i had a very good idea of what i wanted this project to look like, moving through the project alot of styling changes was made to better accommodate the data amd the way the data works for this project.
 
 
 <!-- DEVELOPMENT PROCESS -->
@@ -150,7 +150,7 @@ initially i had a poor Ui design for this project and soon restarted the project
 
 The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
 
-I made use of PHP, it was a big learning curve but in the end its a very nice workflow to use PHP in my project, i discovered more details and bells and whistles that react holds and i am excited to explore these factors in the future.
+I made use of MongoDB for this project, i found mongo to be much more efficient and more user friendly than that of other database frameworks like PHP. My understanding with the frontend of react became much more fluent, i learnt a lot more and became much more comfortable with the framework so the process was much much smoother and efficient.
 
 ### Implementation Process
 <!-- stipulate all of the functionality you included in the project -->
@@ -158,21 +158,21 @@ I made use of PHP, it was a big learning curve but in the end its a very nice wo
 
 * React.JS project started and UI made.
 * Implemented Routing with `React-Router v6`.
-* PHP was implemented
-* initially i had loads of errors with PHP, i finally got the understanding of how the errors work and could from there easily fix the problem.
-* Even now i still have problems with the Update and Delete functionality, i traced the code and backtracked all the way but i could not find the fault unfortunatly
+* Mongo was implemented
+* Created all the routes for the project, the routes "control" the axios requests.
+* i implemented CRUD functionality that works across my whole project, the updating and deleting on the admin pages manage the product data all across the site and everything changes dynamically.
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* I got a greater understanding of how powerful react can be and what it is capable of.
-* I got introduced to PHP and what it is capable of and hwo it works with React.js to connect and update to the database.
-* Personally i got alot better at problem solving my code, PHP is very precise and requires your code to be perfect
+* I became much more efficient and comfortable with react, just emphasising more how powerfull and fun it is to work with.
+* I got introduced to MongoDB, which i found very efficient to work with and user friendly, its very straight forward and the errors are easily established and clear to work through.
+* My workflow with react became much more fluant as i have became much more confidant in my react skills
 
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* i at first had a ton of errors with PHP and could not connect with the DB for the first few weeks, soon to realise my inputs didnt match, just to show how PHP requires your code not to have any faults.
-* I had a major challenge trying to understand how the snakes and ladders of props works within React.js with PHP, it gets very confusing so you have to keep your eye on the ball.
+* The biggest challenge i faced was to carry over the product that i wanted to add to my cart, then move to checkout and finally to the order list.
+* I had some problems with the update part of the CRUD for this project, there were problems with my props carrying through but after some analysis i managed to fix the problem.
 
 
 #### Above And Beyond
@@ -185,7 +185,8 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* For the future i would defnetly want my functionality to be flawless, updating and deleting of all sorts should work in the future aswell as getting more validation going
+* Future implementation for this project i would like to add a wider variety of products for skateboards, like trucks, wheels, grips and bearings.
+* Make a cleaner and more user friendly design for my project.
 
 <!-- MOCKUPS -->
 ## Final Outcome
