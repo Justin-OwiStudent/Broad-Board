@@ -1,147 +1,88 @@
+import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from '../Nav/Nav';
 import classes from './Individual.module.css';
 
 
 const Individual = (props) => {
 
+  let navigate = useNavigate();
     
+  const backHome = () => {
+    sessionStorage.clear();
+    navigate('/Landing')
+  }
+
+  let productId = sessionStorage.getItem("productId");
     
+//   key={item._id}
+//   productId={item._id}
+//   productName={item.productName}
+//   Price={item.Price}
+//   DiscPrice={item.DiscountedPrice}
+//   inStock={item.inStock}
+//   SizeOne={item.SizeOne}
+//   SizeTwo={item.SizeTwo}
+//   SizeThree={item.SizeThree}
 
-    // const backhandler = () => {
-    //     props.
-    // };
+  const [productData, setProductData] = useState({
+    productName: "",
+    description: "",
+    Price: "",
+    DiscPrice: "",
+    inStock: "",
+    SizeOne: "",
+    SizeTwo: "",
+    SizeThree: ""
+  });
 
+  useEffect(()=>{
+    Axios.get('http://localhost:5000/api/oneproduct/' + productId)
+    .then(res => {
+      let data = res.data;
+    //   console.log(data.Sizes.sevenHalf)
+      setProductData({
+        ProductName: data.ProductName,
+        Description: data.Description,
+        Price: data.Price,
+        DiscPrice: data.DiscountedPrice,
+        stock: data.stock,
+        SizeOne: data.Sizes.sevenHalf,
+        SizeTwo: data.Sizes.eight,
+        SizeThree: data.Sizes.eightHalf
+      })
+    })
+    .catch()
+  }, []);
+
+  
+
+   
     return (
         <>
 
             <Nav />
-{/* 
-            <div className={classes.indiv}>
 
-                <div className={classes.container}>
-
-                    <Link to="/BoardShop">  <div className={classes.back} >  </div> </Link>
-
-
-
-                    <div className={classes.ImageContainer}>
-                        <div className={classes.InsideImg}> </div>
-
-                    </div>
-
-                    <div className={classes.DetailContainer}>
-                        <h1>KFD Special (green spec)</h1>
-
-                        <div className={classes.rating}>
-                            <div className={classes.star}></div>
-                            <div className={classes.star}></div>
-                            <div className={classes.star}></div>
-                            <div className={classes.star}></div>
-                            <div className={classes.star}></div>
-                        </div>
-
-                        <h2>R 200,00 </h2>
-
-                        <h4>Availability: </h4>
-                        <h4>Brand: </h4>
-
-                        <div className={classes.quantity}>
-                            <div className={classes.one}>-</div>
-                            <div className={classes.two}>1</div>
-                            <div className={classes.three}>+</div>
-
-                        </div>
-                        <Link to="/Cart"> <button className={classes.add}>add to cart</button></Link>
-
-                    </div>
-
-                    <div className={classes.bestseller}>
-                        <h1>Best Sellers</h1>
-
-                        <div className={classes.besties}>
-                            <div className={classes.bestImg}>
-                                <div className={classes.bestImgImg}></div>
-                            </div>
-                            <h2 className={classes.hh2}>HEROIN Special</h2>
-                            <div className={classes.rating}>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                            </div>
-                            <h2 className={classes.bestPrice}>R 200,00 </h2>
-                        </div>
-
-                        <div className={classes.besties}>
-                            <div className={classes.bestImg}>
-                                <div className={classes.bestImgImg}></div>
-                            </div>
-                            <h2 className={classes.hh2}>HEROIN Special</h2>
-                            <div className={classes.rating}>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                            </div>
-                            <h2 className={classes.bestPrice}>R 200,00 </h2>
-                        </div>
-
-                        <div className={classes.besties}>
-                            <div className={classes.bestImg}>
-                                <div className={classes.bestImgImg}></div>
-                            </div>
-                            <h2 className={classes.hh2}>HEROIN Special</h2>
-                            <div className={classes.rating}>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                                <div className={classes.star}></div>
-                            </div>
-                            <h2 className={classes.bestPrice}>R 200,00 </h2>
-                        </div>
-
-                    </div>
-
-                    <div className={classes.moreDeets}>
-                        <h7>More Information</h7>
-                        <ul>
-                            <li>asdad</li>
-                            <li>asdasd</li>
-                            <li>asdasd</li>
-                            <li>asdasd</li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-
-            </div> */}
 
             <div className={classes.indiv}>
 
                 <div className={classes.containerLeft}>
+                    <div onClick={backHome}  className={classes.back}> </div>
                     <div className={classes.mainImage}></div>
                 </div>
 
                 <div className={classes.containerRight}>
-                    <h1 className={classes.name}>Product Name</h1>
-                    <h4 className={classes.description}>Product description i.e model num ?</h4>
-                    <h4 className={classes.brand}>Brand</h4>
-                    <h4 className={classes.price}>Price</h4>
-                    <h4 className={classes.stock}>available: </h4>
-                    <h4 className={classes.colors}>Sizes </h4>
+                    <h1 className={classes.name}>{productData.ProductName}</h1>
+                    <h4 className={classes.description}>{productData.Description}</h4>
+                    {/* <h4 className={classes.brand}>Brand</h4> */}
+                    <h4 className={classes.price}>R {productData.Price}</h4>
+                    <h4 className={classes.stock}>available: {productData.stock} </h4>
+                    <h4 className={classes.colors}>Sizes: </h4>
 
-                    <div className={classes.block}> 8.5'</div>
-                    <div className={classes.block}></div>
-                    <div className={classes.block}></div>
+                    <div className={classes.block}> <h6>7.5</h6>  <h6>Available: {productData.SizeOne}</h6>  </div>
+                    <div className={classes.block}> <h6>8</h6> <h6>Available: {productData.SizeTwo}</h6> </div>
+                    <div className={classes.block}> <h6>8.5</h6> <h6>Available: {productData.SizeThree}</h6> </div>
 
 
 
@@ -149,7 +90,7 @@ const Individual = (props) => {
                 </div>
 
                 <div className={classes.bestSeller}>
-                    <h1 className={classes.sellerText}> best sellers </h1>
+                    <h1 className={classes.sellerText}> Similar products </h1>
 
                     <div className={classes.best1}>
                         <div className={classes.bestImage}></div>
@@ -176,6 +117,12 @@ const Individual = (props) => {
                     </div>
 
                     <div className={classes.best5}>
+                    <div className={classes.bestImage}></div>
+                        <h1 className={classes.bestName}>KFD</h1>
+                        <h3>R900</h3>
+                    </div>
+
+                    <div className={classes.best6}>
                     <div className={classes.bestImage}></div>
                         <h1 className={classes.bestName}>KFD</h1>
                         <h3>R900</h3>

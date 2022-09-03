@@ -252,6 +252,14 @@ li {
 
 }
 
+.back {
+    margin-left: 50px;
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+    background-image: url(../images/back-arrow.png);
+}
+
 .mainImage {
     margin: auto;
     height: 100%;
@@ -305,19 +313,21 @@ li {
     font-size: 30px;
     font-weight: 400;
     margin-top: 20px;
+    text-decoration: underline;
 }
 
 .block {
     float: left;
-    margin-top: 50px;
-    margin-left: 25px;
-    width: 100px;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 150px;
     height: 50px;
     background-color: black;
     color: white;
     text-align: center;
     padding-top: 25px;
     font-size: 25px;
+    position: relative;
 }
 
 .block:hover {
@@ -354,6 +364,7 @@ li {
     margin: auto;
     margin-top: 150px;
     margin-left: 70px;
+    overflow: scroll;
 }
 
 
@@ -406,7 +417,21 @@ li {
     float: left;
 }
 
+.best6 {
+    
+    width: 20%;
+    height: 100%;
+    
+    float: left;
+}
+
 .bestName {
     text-align: center;
     font-weight: 600;
 }
+
+
+h6 {
+    margin: auto;
+}
+

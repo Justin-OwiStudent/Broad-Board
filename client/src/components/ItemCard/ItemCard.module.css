@@ -39,6 +39,7 @@ h3 {
     text-align: center;
     font-weight: 450;
     color: black;
+    
 }
 
 h4 {
@@ -55,17 +56,22 @@ h5 {
     margin-right: 10px; */
 
    text-align: center;
-   margin-top: 50px;
+   position: absolute;
+   bottom: 45px;
+   left: 38%;
    font-weight: 500;
    color: rgb(0, 0, 0);
 }
 
 .addButton {
     display: block;
-    margin: auto;
+    
     width: 100px;
     height: 30px;
-    margin-top: 15px;
+    position: absolute;
+    bottom: 5px;
+    left: 30%;
+
     /* background-color: #218FBE; */
     background-color: black;
     color: white;
@@ -74,6 +80,8 @@ h5 {
 
 .addButton:hover {
     /* background-color: #06a5e9; */
+    
     background-color: #929292;
     transition: ease-in-out 200ms;
+    
 }

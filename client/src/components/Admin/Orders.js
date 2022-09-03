@@ -1,19 +1,55 @@
-import React from "react";
+import Axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import classes from "./Admin.module.css";
+import OrderItem from "./OrderItem";
 
 const Orders = () => {
+
+// ClientName: 
+// Product: 
+// OrderNumber: 
+// OrderDate: 
+    
+const [readOrders, setReadOrders] = useState();
+const [renderOrders, setRenderOrders] = useState(false);
+
+// ClientName: req.body.ClientName,
+//         Product: req.body.Product,
+//         OrderNumber: req.body.OrderNumber,
+//         OrderDate: req.body.OrderDate
+
+useEffect(() => {
+  Axios.get("http://localhost:5000/api/allorders").then((res) => {
+    let data = res.data;
+    const orderItem = data.map((item) => (
+      <OrderItem
+        key={item._id}
+        orderNum={item.OrderNum}
+        clientName={item.ClientName}
+        productName={item.Product}
+        orderNumber={item.OrderNumber}
+        orderDate={item.OrderDate}
+        editRender={setRenderOrders}
+      />
+    ));
+    setReadOrders(orderItem);
+    setRenderOrders(false);
+  });
+}, [renderOrders]);
+
+
   return (
     <>
       <Nav />
 
       <Link to="/Stock">
-        {" "}
+        
         <h1 className={classes.Stock}>Stock</h1>{" "}
       </Link>
       <Link to="/Orders">
-        {" "}
+     
         <h1 className={classes.Orders}>Orders</h1>{" "}
       </Link>
 
@@ -63,13 +99,7 @@ const Orders = () => {
             <div className={classes.Date}> Order Date</div>
           </div>
 
-          <div className={classes.orders}>
-              <div className={classes.orderNumber}>12</div>
-              <div className={classes.orderClient}>Jack Herrer</div>
-              <div className={classes.orderProduct}>Almost - blada blada</div>
-              <div className={classes.orderDate}> 11/21/1021</div>
-
-          </div>
+         {readOrders}
 
         </div>
       </div>

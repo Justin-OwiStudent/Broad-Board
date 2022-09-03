@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
 import classes from './Cart.module.css'
+import Cartmodal from './Cartmodal';
 
 const Cart = () => {
     return (
@@ -58,6 +59,7 @@ const Cart = () => {
             </div>
             
         </div>
+        <Cartmodal/>
     </>
     );
 };

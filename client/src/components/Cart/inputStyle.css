@@ -1,0 +1,109 @@
+/* .form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+    
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    outline: 0;
+    font-size: 1rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #000000;
+  }
+  
+  .input__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+  }
+  
+
+  .one {
+    width: 1000px;
+    margin-left: 20px;
+    margin-top: -20px;
+  }
+  
+  .two {
+    width: 1000px;
+    margin-left: 20px;
+    margin-top: -10px;
+  }
+
+  .three {
+    width: 1000px;
+    margin-left: 20px;
+    margin-top: -10px;
+
+  }
+  */
+
+
+  /*  */
+
+  /* .input-field {
+    width: 500px;
+    height: 50px;
+    font-size: 1rem;
+    border: none;
+  }
+
+  .input-field::placeholder {
+    color: red;
+    position: absolute;
+    transition: 1s;
+    top: 0px;
+  }
+
+  .input-field:focus {
+    color: red;
+    transition: 0.5s;
+    top: 50px;
+  } */
+
+  /* input[type=text] {
+    position: relative;
+    width: 100px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+  }
+
+  input[type=text]:focus {
+    width: 250px;
+  } */

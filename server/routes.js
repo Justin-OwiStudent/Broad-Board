@@ -12,11 +12,18 @@ const router = express();
 
 router.post('/api/addproduct', (req, res) =>{
     const newProduct = new productSchema({
-        productName: req.body.productName,
-        Size: req.body.Size,
+        SKU: req.body.SKU,
+        ProductName: req.body.ProductName,
         Price: req.body.Price,
         DiscountedPrice: req.body.DiscountedPrice,
-        inStock: req.body.inStock
+        Description: req.body.Description,
+        stock: req.body.stock,
+        date: req.body.date,
+        Sizes: {
+            sevenHalf: req.body.Sizes.sevenHalf,
+            eight: req.body.Sizes.eight,
+            eightHalf: req.body.Sizes.eightHalf,
+        }
     });
 
     newProduct.save()
@@ -40,21 +47,31 @@ router.get('/api/oneproduct/:id', async (req, res) => {
 });
 
 router.delete('/api/deleteproduct/:id', async (req, res) => {
-    const delProduct = await productSchema.remove({_id:req.params.id});
-    res.json(delProduct);
+    const findProduct = await productSchema.remove({_id:req.params.id});
+    res.json(findProduct);
 });
 
 router.patch('/api/updateproduct/:id', async (req, res) => {
-    const updProduct = await productSchema.updateOne(
-        {_id: req.params.id},
-        {$set: {productName: req.body.productName}},
-        {$set: {Size: req.body.Size}},
-        {$set: {Price: req.body.Price}},
-        {$set: {DiscountedPrice: req.body.DiscountedPrice}},
-        {$set: {inStock: req.body.inStock}}
+let stock = +req.body.SizeOne + +req.body.SizeTwo + +req.body.SizeThree
 
+    const findProduct = await productSchema.updateOne(
+        {_id: req.params.id},
+        {$set: {
+            SKU: req.body.SKU,
+            ProductName: req.body.ProductName,
+            Price: req.body.Price,
+            stock: stock,
+            DiscountedPrice: req.body.DiscountedPrice,
+            Description: req.body.Description,
+            Date: req.body.Date,
+            Sizes: {
+                sevenHalf: req.body.SizeOne,
+                eight: req.body.SizeTwo,
+                eightHalf: req.body.SizeThree,
+        }
+    }}
     );
-    res.json(updProduct);
+    res.json(findProduct);
 });
 
 
@@ -64,6 +81,7 @@ router.patch('/api/updateproduct/:id', async (req, res) => {
 //ORDER ROUTES
 router.post('/api/addorder', (req, res) =>{
     const newOrder = new orderSchema({
+        OrderNum: req.body.OrderNum,
         ClientName: req.body.ClientName,
         Product: req.body.Product,
         OrderNumber: req.body.OrderNumber,

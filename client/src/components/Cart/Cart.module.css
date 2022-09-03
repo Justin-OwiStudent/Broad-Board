@@ -29,7 +29,7 @@
     margin-top: 10px;
     width: 90%;
     height: 500px;
-    border: 1px solid black;
+    
     position: relative;
 }
 
@@ -118,6 +118,12 @@
     float: left;
     width: 350px;
     margin-left: 30px;
+    position: relative;
+}
+
+.acc .placeholder {
+    position: absolute;
+    top: -20px;
 }
 
 .num {
@@ -214,7 +220,6 @@
     float: left;
     width: 50px;
     height: 100%;
-    
     background-image: url(../images/Board1.png);
     background-size: 100% 100%;
     margin-left: 40px;
@@ -246,4 +251,11 @@
     border-bottom: 1px solid black;
     border-top: 1px solid black;
 
+}
+
+
+.modal {
+    width: 800px;
+    height: 200px;
+    background-color: red;
 }
