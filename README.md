@@ -64,7 +64,7 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1](https://github.com/Justin-OwiStudent/Receptionist-App/blob/main/Mokcups/Mockup5.png)
+![image1](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup1.png)
 
 ### Project Description
 
@@ -121,17 +121,17 @@ On this site you are able to view all the available stock, you are able to view 
 There is a wide selection of Boards available to choose from as well as a variety of sizes for each board.
 
 
-![image2](https://github.com/Justin-OwiStudent/Receptionist-App/blob/main/Mokcups/Mockup1.png)
+![image2](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup2.png)
 ### Feature 2
 
 Here you are able to view all the available products on the store, these are all dynamically generated based on the data from the database.
 
-![image3](https://github.com/Justin-OwiStudent/Receptionist-App/blob/main/Mokcups/Mockup3.png)
+![image3](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup3.png)
 ### Feature 3
 
 Here you can see all the products on the admin side, you can add more products as well as update them or delete them, when updating any item it will change the information on all pages.
 
-![image4](https://github.com/Justin-OwiStudent/Receptionist-App/blob/main/Mokcups/Mockup4.png)
+![image4](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup4.png)
 
 
 
@@ -193,7 +193,7 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 ### Mockups
 
-![image9](https://github.com/Justin-OwiStudent/Receptionist-App/blob/main/Mokcups/Mockup2.png)
+![image9](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup5.png)
 <br>
 
 
