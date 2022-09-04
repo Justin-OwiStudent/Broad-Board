@@ -33,27 +33,8 @@ const Nav = () => {
         </div>
       </Link>
 
-      {/* <Link to="/Cart">
-        <div className={classes.cart}></div>
-      </Link> */}
 
-
-      {/* <div className={classes.block}>
-        
-        </div>
-        
-      <div className={classes.block}>
-        
-      </div> */}
-
-      {/* <div className={classes.block}> */}
-      {/* <Link to="/Cart"> */}
-         {/* <BsCart2  className={classes.cart}/>  */}
-      {/* </Link> */}
-      {/* </div> */}
-
-
-      {/* <div className={classes.pfp}></div> */}
+   
     </div>
 
     

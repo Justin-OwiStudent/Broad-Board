@@ -164,6 +164,7 @@ router.patch('/api/updateorder/:id', async (req, res) => {
 
 //CLIENT ROUTES
 router.post('/api/addclient', (req, res) =>{
+
     const newClient = new clientSchema({
         ClientName: req.body.ClientName,
         Password: req.body.Password,  
@@ -177,6 +178,8 @@ router.post('/api/addclient', (req, res) =>{
         res.status(400).json({msg: "There was a problem", err:err})
     })
 });
+
+
 
 
 router.get('/api/allclients', async (req, res) =>{

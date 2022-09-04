@@ -5,6 +5,12 @@ import classes from './Cart.module.css'
 
 const CartItem = () => {
     let productId = sessionStorage.getItem("productId");
+    let ProductName = sessionStorage.getItem("ProductName")
+    let Price = sessionStorage.getItem("Price")
+
+    // sessionStorage.setItem('ProductId', props.ProductId);
+    // sessionStorage.setItem('productName', props.ProductName);
+    // sessionStorage.setItem('Price', props.Price);
   
     const [productData, setProductData] = useState({
       productName: "",
@@ -17,7 +23,7 @@ const CartItem = () => {
       SizeThree: ""
     });
 
-    console.log(productData)
+    // console.log(productData)
   
     useEffect(()=>{
       Axios.get('http://localhost:5000/api/oneproduct/' + productId)
@@ -41,9 +47,10 @@ const CartItem = () => {
     return (
         <div className={classes.CartPiece}>
             <div className={classes.CartImage}></div>
-            <h2 className={classes.CartName}>{productData.productName}</h2>
-            <h2 className={classes.CartPrice}>hehe</h2>
+            <h2 className={classes.CartName}>{productData.ProductName} Product Name</h2>
+            <h2 className={classes.CartPrice}>{productData.Price}   </h2>
 
+            <div className={classes.DelIt}></div>
         </div>
     );
 };

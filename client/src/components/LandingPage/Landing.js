@@ -108,10 +108,10 @@ const Landing = () => {
       <Nav />
 
       <BsCart2  className={classes.carting} onClick={cart}/> 
-
+      {modalArea}
     {/* <div className={classes.carting} onClick={cart}></div> */}
     
-    {modalArea}
+   
       <div className={classes.Slider}>
         <ImageSlider slides={SliderData} />
       </div>

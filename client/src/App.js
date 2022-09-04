@@ -8,6 +8,7 @@ import GripShop from "./components/GripShop/GripShop";
 import Individual from "./components/IndividualItem/Individual";
 import Landing from "./components/LandingPage/Landing";
 import Login from "./components/Login/Login";
+import Register from "./components/register/Register";
 import TruckShop from "./components/TruckShop/TruckShop";
 import WheelShop from "./components/WheelShop/WheelShop";
 
@@ -33,6 +34,9 @@ function App() {
 
         <Route path="/Stock" element={<Stock/>}/>
         <Route path="/Orders" element={<Orders/>}/>
+
+        <Route path="/Register" element={<Register/>}/>
+
 
         
 
