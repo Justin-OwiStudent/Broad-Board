@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import Nav from '../Nav/Nav';
 import classes from './Individual.module.css';
+import { BsCart2 } from "react-icons/bs";
+import Cartmodal from '../Cart/Cartmodal';
 
 
 
@@ -17,20 +19,12 @@ const Individual = () => {
   }
 
   let productId = sessionStorage.getItem("productId");
+
+  const [imgURL, setImgURL] = useState();
   
-    // console.log(productId)
-    
 
-//   key={item._id}
-//   productId={item._id}
-//   productName={item.productName}
-//   Price={item.Price}
-//   DiscPrice={item.DiscountedPrice}
-//   inStock={item.inStock}
-//   SizeOne={item.SizeOne}
-//   SizeTwo={item.SizeTwo}
-//   SizeThree={item.SizeThree}
-
+  
+  
   const [productData, setProductData] = useState({
     productName: "",
     description: "",
@@ -39,16 +33,14 @@ const Individual = () => {
     inStock: "",
     SizeOne: "",
     SizeTwo: "",
-    SizeThree: ""
+    SizeThree: "",
+    image: ""
   });
-
-  console.log(productData)
 
   useEffect(()=>{
     Axios.get('http://localhost:5000/api/oneproduct/' + productId)
     .then(res => {
       let data = res.data;
-    //   console.log(data)
       setProductData({
         ProductName: data.ProductName,
         Description: data.Description,
@@ -59,11 +51,27 @@ const Individual = () => {
         SizeTwo: data.Sizes.eight,
         SizeThree: data.Sizes.eightHalf
       })
+      let URL = 'http://localhost:5000/productImages/' + data.image;
+      setImgURL(URL);
     })
     .catch()
   }, []);
 
+
+//   console.log(productId)
+  const AddCart = () => {
+    sessionStorage.setItem('productId', productId);
   
+  }
+  const [modalArea, setModal] = useState();
+  
+  const cart = () => {
+    setModal(<Cartmodal 
+      close={setModal}
+    />)
+  }
+
+//   sessionStorage.setItem(productData)
 
    
     return (
@@ -76,14 +84,18 @@ const Individual = () => {
 
                 <div className={classes.containerLeft}>
                     <div onClick={backHome}  className={classes.back}> </div>
-                    <div className={classes.mainImage}></div>
+                    <div className={classes.ImgPlace}> <img className={classes.mainImage} src={imgURL} /></div>
                 </div>
 
                 <div className={classes.containerRight}>
+                    <BsCart2  className={classes.cartingg} onClick={cart}/> 
+                    {modalArea}
                     <h1 className={classes.name}>{productData.ProductName}</h1>
                     <h4 className={classes.description}>{productData.Description}</h4>
                     {/* <h4 className={classes.brand}>Brand</h4> */}
-                    <h4 className={classes.price}>R {productData.Price}</h4>
+                    <h4 className={classes.price}>R: {productData.Price}</h4>
+                    <h4 className={classes.stock}>Discounted Price: R {productData.DiscPrice}</h4>
+
                     <h4 className={classes.stock}>available: {productData.stock} </h4>
                     <h4 className={classes.colors}>Sizes: </h4>
 
@@ -93,10 +105,10 @@ const Individual = () => {
 
 
 
-                    <button className={classes.add}  > Add to Cart </button>
+                    <button className={classes.add} onClick={AddCart} > Add to Cart </button>
                 </div>
 
-                <div className={classes.bestSeller}>
+                {/* <div className={classes.bestSeller}>
                     <h1 className={classes.sellerText}> Similar products </h1>
 
                     <div className={classes.best1}>
@@ -136,7 +148,7 @@ const Individual = () => {
                     </div>
 
 
-                </div>
+                </div> */}
 
 
             </div>

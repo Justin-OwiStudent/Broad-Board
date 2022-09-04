@@ -1,4 +1,5 @@
-import React from "react";
+import Axios from "axios";
+import React, { useEffect, useState } from "react";
 import classes from './Cart.module.css'
 import CartItem from "./CartItem";
 
@@ -9,43 +10,115 @@ const Cartmodal = (props) => {
     props.close();
   };
 
-  // const [productData, setProductData] = useState({
-  //   productName: "",
-  //   description: "",
-  //   Price: "",
-  //   DiscPrice: "",
-  //   inStock: "",
-  //   SizeOne: "",
-  //   SizeTwo: "",
-  //   SizeThree: ""
-  // });
+  let productId = sessionStorage.getItem("productId");
+    console.log(productId)
 
-  sessionStorage.getItem("productId");
 
-  // useEffect(()=>{
-  //   Axios.get('http://localhost:5000/api/oneproduct/' + productId)
-  //   .then(res => {
-  //     let data = res.data;
-  //   //   console.log(data)
-  //     setProductData({
-  //       ProductName: data.ProductName,
-  //       Description: data.Description,
-  //       Price: data.Price,
-  //       DiscPrice: data.DiscountedPrice,
-  //       stock: data.stock,
-  //       SizeOne: data.Sizes.sevenHalf,
-  //       SizeTwo: data.Sizes.eight,
-  //       SizeThree: data.Sizes.eightHalf
-  //     })
-  //   })
-  //   .catch()
-  // }, []);
+    // const [productData, setProductData] = useState({
+    //     productName: "",
+    //     description: "",
+    //     Price: "",
+    //     DiscPrice: "",
+    //     inStock: "",
+    //     SizeOne: "",
+    //     SizeTwo: "",
+    //     SizeThree: ""
+    //   });
+    
+      // useEffect(()=>{
+      //   Axios.get('http://localhost:5000/api/oneproduct/' + productId)
+      //   .then(res => {
+      //     let data = res.data;
+      //     setProductData({
+      //       ProductName: data.ProductName,
+      //       Description: data.Description,
+      //       Price: data.Price,
+      //       DiscPrice: data.DiscountedPrice,
+      //       stock: data.stock,
+      //       SizeOne: data.Sizes.sevenHalf,
+      //       SizeTwo: data.Sizes.eight,
+      //       SizeThree: data.Sizes.eightHalf
+      //     })
+      //   })
+      //   .catch()
+      // }, []);
+
+      const [readProducts, setReadProducts] = useState();
+      const [renderProducts, setRenderProducts] = useState(false);
+
+      useEffect(()=>{
+        Axios.get('http://localhost:5000/api/oneproduct/' + productId)
+        .then(res => {
+          let data = res.data;
+          // console.log(data)
+          const productItem = data.map((item) => (
+            <CartItem
+              key={item._id}
+              SKU={item.SKU}
+              productId={item._id}
+              ProductName={item.ProductName}
+              Price={item.Price}
+              Desc={item.Description}
+              DiscPrice={item.DiscountedPrice}
+              stock={item.stock}
+              // Sizes={item.Sizes}
+              SizeOne={item.Sizes.sevenHalf}
+              SizeTwo={item.Sizes.eight}
+              SizeThree={item.Sizes.eightHalf}
+              editRender={setRenderProducts}
+            />
+          ));
+          console.log(productItem)
+          setReadProducts(productItem);
+          setRenderProducts(false);
+        });
+      }, [renderProducts]);
+     
+      console.log(readProducts)
+
+
+      // useEffect(() => {
+      //   Axios.get("http://localhost:5000/api/allproducts").then((res) => {
+      //     let data = res.data;
+      //     const productItem = data.map((item) => (
+      //       <ItemCard
+      //         key={item._id}
+      //         SKU={item.SKU}
+      //         productId={item._id}
+      //         ProductName={item.ProductName}
+      //         Price={item.Price}
+      //         Desc={item.Description}
+      //         DiscPrice={item.DiscountedPrice}
+      //         stock={item.stock}
+      //         Sizes={item.Sizes}
+      //         SizeOne={item.Sizes.sevenHalf}
+      //         SizeTwo={item.Sizes.eight}
+      //         SizeThree={item.Sizes.eightHalf}
+      //         editRender={setRenderProducts}
+      //       />
+      //     ));
+      //     console.log(productItem)
+      //     setReadProducts(productItem);
+      //     setRenderProducts(false);
+      //   });
+      // }, [renderProducts]);
+// console.log(productData)
+   
 
   return (
     <div className={classes.CartModal}>
       <h1 className={classes.CartTitle}> Cart </h1>
 
-      <CartItem/>
+      {/* <CartItem/> */}
+
+      {readProducts}
+
+
+
+
+
+
+
 
       {/* <div className="one">
         <div class="form__group field">

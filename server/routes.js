@@ -2,29 +2,62 @@ const express = require('express');
 const productSchema = require('./models/Products');
 const orderSchema = require('./models/Orders');
 const clientSchema = require('./models/Clients');
-
-
-
+const multer = require('multer');
+const path = require('path');
 const router = express();
 
+
+const productImageStore = multer.diskStorage({
+    destination: (req, file, CB) => {
+        CB(null, './productImages')
+    },
+
+    filename: (req, file, CB) => {
+        console.log(file)
+        CB(null, Date.now() + path.extname(file.originalname))
+    }
+});
+
+const uploadProductImage = multer({storage: productImageStore});
 //ROUTES
 //PRODUCTS ROUTES
 
-router.post('/api/addproduct', (req, res) =>{
+router.post('/api/addproduct', uploadProductImage.single('image') ,(req, res) =>{
+
+    let data = JSON.parse(req.body.information);
+
+    console.log(req.file.filename);
+
     const newProduct = new productSchema({
-        SKU: req.body.SKU,
-        ProductName: req.body.ProductName,
-        Price: req.body.Price,
-        DiscountedPrice: req.body.DiscountedPrice,
-        Description: req.body.Description,
-        stock: req.body.stock,
-        date: req.body.date,
+        SKU: data.SKU,
+        ProductName: data.ProductName,
+        Price: data.Price,
+        DiscountedPrice: data.DiscountedPrice,
+        Description: data.Description,
+        stock: data.stock,
+        date: data.date,
         Sizes: {
-            sevenHalf: req.body.Sizes.sevenHalf,
-            eight: req.body.Sizes.eight,
-            eightHalf: req.body.Sizes.eightHalf,
-        }
+            sevenHalf: data.Sizes.sevenHalf,
+            eight: data.Sizes.eight,
+            eightHalf: data.Sizes.eightHalf,
+        },
+        image: req.file.filename
     });
+
+    // const newProduct = new productSchema({
+    //     SKU: req.body.SKU,
+    //     ProductName: req.body.ProductName,
+    //     Price: req.body.Price,
+    //     DiscountedPrice: req.body.DiscountedPrice,
+    //     Description: req.body.Description,
+    //     stock: req.body.stock,
+    //     date: req.body.date,
+    //     Sizes: {
+    //         sevenHalf: req.body.Sizes.sevenHalf,
+    //         eight: req.body.Sizes.eight,
+    //         eightHalf: req.body.Sizes.eightHalf,
+    //     }
+    // });
 
     newProduct.save()
     .then(item => {

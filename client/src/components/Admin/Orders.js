@@ -26,7 +26,7 @@ useEffect(() => {
     const orderItem = data.map((item) => (
       <OrderItem
         key={item._id}
-        orderNum={item.OrderNum}
+        orderId={item._id}
         clientName={item.ClientName}
         productName={item.Product}
         orderNumber={item.OrderNumber}
@@ -82,13 +82,13 @@ useEffect(() => {
       <div className={classes.OrderPage}>
         <div className={classes.leftSection}>
           <h3 className={classes.OrderText}>Total Orders:</h3>
-          <h1 className={classes.TotalOrder}> 5000 </h1>
+          <h1 className={classes.TotalOrder}> - </h1>
 
           <h3 className={classes.outgoingOrders}>outgoing Orders:</h3>
-          <h1 className={classes.outOrders}> 5000 </h1>
+          <h1 className={classes.outOrders}> - </h1>
 
           <h3 className={classes.outgoingOrders}>Pending orders:</h3>
-          <h1 className={classes.outOrders}> 5000 </h1>
+          <h1 className={classes.outOrders}> - </h1>
         </div>
 
         <div className={classes.rightSection}>

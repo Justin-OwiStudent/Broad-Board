@@ -19,7 +19,7 @@ const productSchema = mongoose.Schema({
     }, 
     DiscountedPrice: {
         type: Number,
-        required: true
+        required: false
     }, 
     stock: {
         type: Number,
@@ -33,6 +33,10 @@ const productSchema = mongoose.Schema({
         sevenHalf: {type: Number, required: true},
         eight: {type: Number, required: true},
         eightHalf: {type: Number, required: true}
+    },
+    image: {
+        type: String,
+        required: true
     }
 });
 

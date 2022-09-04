@@ -115,7 +115,7 @@
     margin-top: 25px;
     border: 0.1px solid black;
     width: 50%;
-    height: 200px;
+    height: 300px;
     border-radius: 10px;
     position: relative;
 }
@@ -479,6 +479,19 @@
     margin-top: 5px;
 }
 
+.delOrder {
+    width: 100px;
+    height: 35px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.delOrder:hover {
+    background-color: #1cc468;
+}
+
 
 
 .EditModal {
@@ -623,4 +636,39 @@
 
 .CancelBut:hover {
     background-color: #218FBE;
+}
+
+#imgPrev {
+background-color: red;
+}
+
+.imgPrev {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(200, 200, 200);
+    position: absolute;
+    left: 25px;
+    top: 190px;
+}
+
+.ImgBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
+    width: 150px;
+    height: 35px;
+    /* background-color: black; */
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.ImgBtn:hover {
+    background-color: #218FBE;
+}
+
+.ImgName{
+    position: absolute;
+    bottom: 70px;
+    left: 150px;
 }

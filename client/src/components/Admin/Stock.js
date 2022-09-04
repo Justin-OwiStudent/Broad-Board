@@ -13,6 +13,8 @@ const Stock = (props) => {
   const [readProducts, setReadProducts] = useState();
   const [renderProducts, setRenderProducts] = useState(false);
 
+  
+
   useEffect(() => {
     Axios.get("http://localhost:5000/api/allproducts").then((res) => {
       let data = res.data;
@@ -44,14 +46,43 @@ const Stock = (props) => {
   let defaultFormVals = ["ProductName", "Price", "DiscountedPrice", "Description", "SizeOne", "SizeTwo", "SizeThree"];
 
   const [formValues, setFormValues] = useState(defaultFormVals);
+  const [imageName, setImageName] = useState("Name of file will appear here");
+
+  const [productImage, setProductImage] = useState();
   
   const getValues = (e) =>{
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   }
+
+  const getImage = (e) => {
+
+//multer comes in here
+    let imageFile = e.target.files[0];
+    setProductImage(imageFile);
+
+
+  let value = e.target.value;
+  let imageeName = value.substring(12)
+  setImageName(imageeName)
+
+    let reader = new FileReader();
+    reader.onload = () => {
+      let output = document.getElementById('imgPrev')
+      output.src = reader.result;
+    };
+
+    reader.readAsDataURL(e.target.files[0]);
+
+
+  }
+
+
   
   const addProduct = (e) => {
       e.preventDefault();
+
+      const payloadData = new FormData();
   
       var stock = +formValues['SizeOne'] + +formValues['SizeTwo'] + +formValues['SizeThree'];
   
@@ -69,9 +100,12 @@ const Stock = (props) => {
           }
     }
 
+    payloadData.append("information", JSON.stringify(payload));
+    payloadData.append("image", productImage)
+
     console.log(payload)
   
-    Axios.post('http://localhost:5000/api/addproduct', payload)
+    Axios.post('http://localhost:5000/api/addproduct', payloadData)
     .then((res)=> {
       if(res){
         console.log("Item Added"); 
@@ -107,6 +141,12 @@ const Stock = (props) => {
           <input className={classes.AddTwo} name="SizeTwo" placeholder="SizeTwo" onChange={getValues}/>
           <input className={classes.AddThree} name="SizeThree" placeholder="SizeThree" onChange={getValues}/>
           <input className={classes.SKU} name="SKU" placeholder="SKU" onChange={getValues}/>
+
+          {/* <input className={classes.Image} name="Image" placeholder="Image" /> */}
+          Upload File <input className={classes.ImgBtn} type="file" onChange={getImage}/>
+          <img className={classes.imgPrev} id='imgPrev'></img>
+          <p className={classes.ImgName}>{imageName}</p>
+
 
 
           <button type='submit' className={classes.addProduct}> Add Product </button>
