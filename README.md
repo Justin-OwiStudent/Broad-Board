@@ -121,28 +121,28 @@ On this site you are able to view all the available stock, you are able to view 
 There is a wide selection of Boards available to choose from as well as a variety of sizes for each board.
 
 
-![image2](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup2.png)
+![image2](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup9.png)
 ### Feature 2
 
 Here you are able to view all the available products on the store, these are all dynamically generated based on the data from the database.
 
-![image3](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup3.png)
+![image3](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup10.png)
 ### Feature 3
 
 Here you can see all the products on the admin side, you can add more products as well as update them or delete them, when updating any item it will change the information on all pages.
 
-![image4](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup4.png)
+![image4](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup3.png)
 
 
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
-<!-- here you will add things like wireframing, data structure planning, anything that shows your process. You need to include images-->
+<!-- here you will add things like wire framing, data structure planning, anything that shows your process. You need to include images-->
 ## Concept Process
 
 The `Conceptual Process` is the set of actions, activities and research that was done when starting this project.
 
-Initially i had a very good idea of what i wanted this project to look like, moving through the project alot of styling changes was made to better accommodate the data amd the way the data works for this project.
+Initially i had a very good idea of what i wanted this project to look like, moving through the project a lot of styling changes was made to better accommodate the data and the way the data works for this project.
 
 
 <!-- DEVELOPMENT PROCESS -->
@@ -175,13 +175,12 @@ I made use of MongoDB for this project, i found mongo to be much more efficient 
 * I had some problems with the update part of the CRUD for this project, there were problems with my props carrying through but after some analysis i managed to fix the problem.
 
 
-#### Above And Beyond
+<!-- #### Above And Beyond
 
 What aspects of this final build contribute to the `Above And Beyond` Component of your brief?
-<!-- what did you learn outside of the classroom and implement into your project-->
-* Deep delve into component based development.
-* For me i had a tough time to learn react initially, but this term i decided to go head first and untangle everything, instead of reusing certain components instead i went to make new and to remap those components to work with the different sections of my code, i got a much greater understanding of React.js and for me that is a big milestone that i am proud of. i also started to snap how Javascript work, as simple as it sounds its one of my biggest challenges and im starting to overcome it, i call that development.
 
+* 
+*  -->
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
@@ -202,7 +201,7 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://www.youtube.com/watch?v=h5MsvyMqyt8)
+[View Demonstration](https://www.youtube.com/watch?v=TPi5LbfuBtc)
 
 
 See the [open issues](https://github.com/Justin-OwiStudent/Receptionist-App/issues) for a list of proposed features (and known issues).
