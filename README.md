@@ -121,17 +121,17 @@ On this site you are able to view all the available stock, you are able to view 
 There is a wide selection of Boards available to choose from as well as a variety of sizes for each board.
 
 
-![image2](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup9.png)
+![image2](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/mocup14.png)
 ### Feature 2
 
 Here you are able to view all the available products on the store, these are all dynamically generated based on the data from the database.
 
-![image3](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup10.png)
+![image3](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup6.png)
 ### Feature 3
 
 Here you can see all the products on the admin side, you can add more products as well as update them or delete them, when updating any item it will change the information on all pages.
 
-![image4](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup3.png)
+![image4](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/mockup12.png)
 
 
 
@@ -164,9 +164,9 @@ I made use of MongoDB for this project, i found mongo to be much more efficient 
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* I became much more efficient and comfortable with react, just emphasising more how powerfull and fun it is to work with.
+* I became much more efficient and comfortable with react, just emphasising more how power full and fun it is to work with.
 * I got introduced to MongoDB, which i found very efficient to work with and user friendly, its very straight forward and the errors are easily established and clear to work through.
-* My workflow with react became much more fluant as i have became much more confidant in my react skills
+* My workflow with react became much more fluent as i have became much more confidant in my react skills
 
 
 #### Challenges
@@ -186,6 +186,7 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 * Future implementation for this project i would like to add a wider variety of products for skateboards, like trucks, wheels, grips and bearings.
 * Make a cleaner and more user friendly design for my project.
+* Make proper use of the Cart modal and the checkout page.
 
 <!-- MOCKUPS -->
 ## Final Outcome
@@ -220,7 +221,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 * **Justin Koster** - [200100@virtualwindow.co.za](200100@virtualwindow.co.za)  
-* **Project Link** - https://github.com/Justin-OwiStudent/Receptionist-App
+* **Project Link** - https://github.com/Justin-OwiStudent/Broad-Board
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
