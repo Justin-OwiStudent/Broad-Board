@@ -33,9 +33,14 @@ console.log(props)
   });
   
   useEffect(() => {
-    Axios.get('http://localhost:5000/api/allproducts').then((res) => {
+    Axios.get('http://localhost:5000/api/oneproduct/' + productId)
+    .then((res) => {
       let data = res.data;
-      const productItem = data.map((item) => (
+      console.log(data)
+      let array = []
+
+      array.push(data)
+       const productItem = array.map((item) => (
         <CartItem
           key={item._id}
           SKU={item.SKU}
@@ -51,7 +56,7 @@ console.log(props)
           SizeThree={item.Sizes.eightHalf}
           image={item.image}
           editRender={setRenderProducts}
-        />
+        /> 
       ));
       // let URL = 'http://localhost:5000/productImages/' + data.image;
       // setImgURL(URL);

@@ -12,14 +12,14 @@ const ItemCard = (props) => {
 
   const toProduct = () => {
     sessionStorage.setItem('productId', props.productId);
-    sessionStorage.setItem('props', props);
+
 
     navigate('/Individual')
   }
 
   const toCart = () => {
     sessionStorage.setItem('productId', props.productId);
-    sessionStorage.setItem('props', props);
+   
 
   }
 

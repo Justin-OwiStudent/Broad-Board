@@ -35,6 +35,7 @@ const CartItem = () => {
           Price: data.Price,
           DiscPrice: data.DiscountedPrice,
           stock: data.stock,
+          image: data.image,
           SizeOne: data.Sizes.sevenHalf,
           SizeTwo: data.Sizes.eight,
           SizeThree: data.Sizes.eightHalf
@@ -46,9 +47,9 @@ const CartItem = () => {
 
     return (
         <div className={classes.CartPiece}>
-            <div className={classes.CartImage}></div>
+            <div><img className={classes.CartImage} src={'http://localhost:5000/productImages/' + productData.image}/> </div>
             <h2 className={classes.CartName}>{productData.ProductName} Product Name</h2>
-            <h2 className={classes.CartPrice}>{productData.Price}   </h2>
+            <h2 className={classes.CartPrice}>R {productData.Price}   </h2>
 
             <div className={classes.DelIt}></div>
         </div>

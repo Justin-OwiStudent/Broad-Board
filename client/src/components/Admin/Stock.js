@@ -10,10 +10,9 @@ import StockItem from './StockItem';
 const Stock = (props) => {
 
   console.log(props)
+
   const [readProducts, setReadProducts] = useState();
   const [renderProducts, setRenderProducts] = useState(false);
-
-  
 
   useEffect(() => {
     Axios.get("http://localhost:5000/api/allproducts").then((res) => {
