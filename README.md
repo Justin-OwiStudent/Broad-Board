@@ -64,7 +64,7 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/Mockup1.png)
+![image1](https://github.com/Justin-OwiStudent/Broad-Board/blob/main/Mockups/mockup10.png)
 
 ### Project Description
 
